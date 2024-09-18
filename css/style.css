@@ -99,20 +99,24 @@ h3 { font-size: var(--fs-h3) }
 
 
 .section__title {
-    margin-bottom: .25em;   
+    margin-bottom: .25em; 
+    text-align: center;  
 }
 
 .section__title--intro {
     font-weight: var(--fw-reg);
+    text-align: center;  
 }
 
 .section__title--intro strong{
     display: block;/* so that the name Jane always is on its own block ,considered a compound selector*/
+    text-align: center;  
 }
 
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
+    text-align: center;  
 }
 
 .section__subtitle--intro,
@@ -121,12 +125,14 @@ h3 { font-size: var(--fs-h3) }
         padding: .25em 1em;
         font-family: var(--ff-secondary);
         margin-bottom: 1em;
+        text-align: center;  
 }
 
 .section__subtitle--work {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 1em;
+    text-align: center;  
 }
 
 /* header */
@@ -246,6 +252,7 @@ transform: translateX(0);
 /*  Intro section  */
 
 .intro {
+    text-align: center;  
     position: relative;
 }
 
@@ -254,6 +261,7 @@ transform: translateX(0);
 }
 .section__subtitle--intro {
     display: inline-block;
+    text-align: center;  
 }/*subtitle block is short when small screen , long(full length) when big screen (speak like cave-man)*/
 
 @media (min-width: 600px) {

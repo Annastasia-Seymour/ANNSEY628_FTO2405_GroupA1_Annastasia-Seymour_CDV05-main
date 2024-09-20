@@ -7,15 +7,16 @@
 /* Customize these properties for own design */
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary: 'Merriweather', serif;
+    --ff-secondary: 'Courier New', monospace
     
     --fw-reg: 300;
     --fw-bold: 900;
     
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-light: #edf2f4;
+    --clr-dark: #2b2d42;
+    --clr-accent: #ffbe0b;
+    --vlr-accent-extra : #219ebc;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -42,6 +43,8 @@ html{
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background: var(--clr-light);
     color: var(--clr-dark);
     margin: 0;
@@ -52,12 +55,22 @@ body {
 
 section {
     padding: 5em 2em;
+    background-color: ;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+        align-items: center;
+        display: block;
+        width: 200px; /* Set the width */
+        height: 200px; /* Set the height */
+        border-radius: 50%; /* Make the image round */
+        margin: 20px;
+        border: 5px solid #ffbe0b; /* Set border thickness, style, and color */
+        object-fit: cover; /* Ensures the image covers the container */
+
+    
 }
+
 
 strong { font-weight: var(--fw-bold);} /*ensure the name is set to bold*/
 
@@ -129,6 +142,8 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .section__subtitle--work {
+    display: flex;
+    justify-content: center;
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 1em;
@@ -258,6 +273,12 @@ transform: translateX(0);
 
 .intro__img {
     box-shadow: var(--bs);
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
 }
 .section__subtitle--intro {
     display: inline-block;
@@ -300,7 +321,7 @@ transform: translateX(0);
 
 .my-services {
     background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.jpg);
+    /*background-image: var(--);*/
     background-size: cover; /*prevents the text from repeating itself , can be related to images too remember Passenger counter*/
     /*background-blend-mode: multiply ; /*to darken the background so the text appears clearer*/
     color: var(--clr-light);
@@ -332,7 +353,7 @@ transform: translateX(0);
 }
 @media (min-width: 800px){
     .services {
-        display: flex; /*this will place the paragraphs next to each other if you put text anwhere else it aligns the whole content*/
+        display: flex; /*this will place the paragraphs next to each other if you put text anywhere else it aligns the whole content*/
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
@@ -348,8 +369,19 @@ transform: translateX(0);
     margin: 0 auto;
 }
  .about-me__img {
-    box-shadow: var(--bs);
-}  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px ;/* Set the width */
+    height: 300px; /* Set the height */
+    border-radius: 5%; /* Make the image round */
+    border: 5px solid #ffbe0b; /* Set border thickness, style, and color */
+    object-fit: cover; /* Ensures the image covers the container */
+
+}
+
 
 @media (min-width: 600px) {
     .about-me{
@@ -377,13 +409,26 @@ transform: translateX(0);
         padding-right: calc(200px + 4em);
 
     }
-
     .about-me__img { 
-        grid-area: img;
-        position:relative;
-        z-index: 2; /*ensures image will always be on top of subtitle blue thingy*/
+        border-radius: 0; /* Or a small value for slightly rounded corners */
+        width:100%;
+        height: auto;
     }
-  
+.about-me-container{
+    
+        border-radius: 0; /* Or a small value for slightly rounded corners */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: img;
+        position: relative;
+        z-index: 2; /* Ensure image stays on top */
+        width: 100%; /* Adjust the width to fit the container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensures the image fits inside the container without being cropped */
+    
+    
+}    
 }
 
 /* My Work */
@@ -400,11 +445,14 @@ transform: translateX(0);
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
+    display: flex;
+    justify-content: center;
+    background: #fff);
     overflow: hidden;/*Keeps the image from growing and overlaping the other images, this will keep them in effect wothout overlap (overflow)*/
 }
 
 .portfolio__img {
+    
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
@@ -473,5 +521,4 @@ transform: translateX(0);
     margin-left: auto;
     margin-right: auto;
 }
-
 
